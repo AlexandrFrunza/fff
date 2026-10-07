@@ -1,25 +1,26 @@
-# Welcome to your Lovable project
+# fff.cy
 
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+Landing page for fff.cy, an independent digital studio.
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Requires Node.js and Yarn.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+yarn install
+yarn dev        # http://localhost:8080
 ```
+
+## Scripts
+
+- `yarn build`: production build into `.output/`
+- `yarn preview`: serve the production build locally
+- `yarn test`: run the tests
+- `yarn lint` / `yarn format`: ESLint and Prettier
+
+## Deployment
+
+The build targets Cloudflare Workers (`nitro({ preset: "cloudflare-module" })` in `vite.config.ts`). After `yarn build`, deploy with `npx wrangler deploy --config .output/server/wrangler.json`. To host elsewhere, change the Nitro preset (e.g. `vercel`, `netlify`, `node-server`).
 
 ## Built with
 

@@ -2,10 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDownRight, ArrowUpRight, Asterisk, Circle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import noirLoop from "@/assets/noir-gold-loop.mp4.asset.json";
 
-// Lovable-hosted assets are not served by the local dev server; use the copy in public/ instead.
-const noirLoopSrc = import.meta.env.DEV ? "/noir-gold-loop.mp4" : noirLoop.url;
+const noirLoopSrc = "/noir-gold-loop.mp4";
 
 // Hero "Live signal" card is hidden for now; set to true to bring it back.
 const SHOW_SIGNAL_CARD = false;
